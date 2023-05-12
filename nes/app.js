@@ -279,11 +279,57 @@ break;
 // console.log(prosecnaVrednost / nekiNiz.length);
 ///////////////////// OBJEKTI/////////////////////////////////////
 
-const ourFirstObject = {
-  car: "Alfa romeo",
-  vozac: "Dzenis Bronja",
-  suvozac: "Redzi",
-  godina: 23,
-};
+// const ourFirstObject = {
+//   car: "Alfa romeo",
+//   vozac: "Dzenis Bronja",
+//   suvozac: "Redzi",
+//   godina: 23,
+// };
+// console.log(ourFirstObject);
 
-console.log(ourFirstObject);
+/////////////////////////////////////////////////////VEZBA FIZZBUZZ////////////////////////////
+// for (let i = 0; i < 100; i++) {
+//   if (i % 15 === 0) {
+//     console.log("FIZZBUZZ");
+//   } else if (i % 5 === 0) {
+//     console.log("BUZZ");
+//   } else if (i % 3 === 0) {
+//     console.log("FIZZ");
+//   } else {
+//     console.log(i);
+//   }
+// }
+///////
+// const nizBrojeva = [10, 15, 12, 45, 63, 75, 23, 42, 23, 17, 29, 45];
+// nizBrojeva.push = [13, 65];
+// nizBrojeva.unshift = [11, 12];
+// console.log(nizBrojeva);
+// const mnozenje = nizBrojeva.map((el) => el * 7).filter(el);
+// console.log(mnozenje);
+/////////////////7777OBJEKTI
+const shop = {
+  firmName: "SHOP",
+  gain: 100000,
+  staff: [
+    {
+      name: "Tajba",
+      position: "menager",
+      salary: 1000,
+    },
+    {
+      nema: "Iman",
+      position: "Boss",
+      salary: 1000,
+    },
+  ],
+  mostPaid() {
+    console.log(
+      "Our most paid worker is " +
+        shop.staff[0].name +
+        " her salary is " +
+        shop.staff[0].salary
+    );
+  },
+};
+console.log(shop);
+shop.mostPaid();
