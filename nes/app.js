@@ -477,10 +477,26 @@ const watchList = [
 
 // Only change code above this line
 
-const movieNameAndReating = watchList.map((el) => {
-  return { title: el.Title, rating: el.imdbRating };
-});
-console.log(movieNameAndReating);
+// const movieNameAndReating = watchList.map((el) => {
+//   return { title: el.Title, rating: el.imdbRating };
+// });
+// console.log(movieNameAndReating);
 
-const onlyAbove = movieNameAndReating.filter((el) => el.rating >= 8.0);
-console.log(onlyAbove);
+// const onlyAbove = movieNameAndReating.filter((el) => el.rating >= 8.0);
+// console.log(onlyAbove);
+
+/////////////////////////
+// const nasCustomObjekat = {
+//   odeljenje: "3-10",
+//   duks: "zeleni",
+//   ja: "ne znam",
+//   godine: 18,
+//   brojLaptopova: 9,
+// };
+// function ourFirstFunction(argumentFirst, argumentSecond) {
+//   console.log(
+//     `${argumentFirst} ${this.odeljenje} ${argumentSecond} ${this.duks}`
+//   );
+// }
+
+// ourFirstFunction.call(nasCustomObjekat, "Volim", "i nosim duks");
