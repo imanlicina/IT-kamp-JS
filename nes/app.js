@@ -500,3 +500,191 @@ const watchList = [
 // }
 
 // ourFirstFunction.call(nasCustomObjekat, "Volim", "i nosim duks");
+////////////CLOSURE///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// let a = 6;
+
+// function prva() {
+//   console.log(a);
+// }
+// function druga() {
+//   let a = 7;
+//   console.log(a);
+// }
+// function treca() {
+//   let a = 8;
+//   console.log(a);
+// }
+// prva();
+// druga();
+// treca();
+
+////////////////////////////////FUNKCIJA ZA OBJEKAT/////////////
+
+// function createUser(userName, userLastName) {
+//   return{
+//     name: userName,
+//     lastName: userLastName;
+//     };
+
+// }
+// const userIman = createUser("iman", "licina");
+
+// console.log(userIman);
+
+// class Phone {
+//   constructor(marka, model, gb) {
+//     this.comp = marka;
+//     this.model = model;
+//     this.brojGb = gb;
+//   }
+// }
+// const iman = new Phone("Iphone", "13", 260);
+
+// console.log(iman);
+
+///////////////////////////////////////////
+
+// class Bus {
+//   color;
+//   seats;
+
+//   constructor(boja, sedista) {
+//     this.seats = sedista;
+//     this.color = boja;
+//   }
+
+//   changeColor(newColor) {
+//     this.color = newColor;
+//   } ////////SETTER
+
+//   getColor() {
+//     return this.color;
+//   } //////GETTER
+// }
+
+// const lasta = new Bus(55, "zelena");
+// console.log(lasta);
+
+// lasta.changeColor("zuta");
+// console.log(lasta); ///////Ovako aktiviramo setter
+
+// const bojaAutobusa = lasta.getColor();
+// console.log(bojaAutobusa); ///////Ovako se aktivira getter
+
+////////////DOMACI//////
+class AllPlayers {
+  criminal_record;
+  pliable;
+  constructor(criminal, player) {
+    this.criminal_record = criminal;
+    this.pliable = player;
+  }
+}
+
+class Franklin extends AllPlayers {
+  ability;
+  color;
+  relationship;
+  race;
+  constructor(criminal, player, ability, color, relationship, race) {
+    super(criminal, player);
+    this.ability = ability;
+    this.color = color;
+    this.relationship = relationship;
+    this.race = race;
+  }
+  getAbility() {
+    console.log(this.ability, "-Franklin");
+  }
+}
+
+class Michael extends Franklin {
+  children;
+  constructor(criminal, player, ability, color, relationship, race, children) {
+    super(criminal, player, ability, color, relationship, race);
+    this.children = children;
+  }
+  getAbility() {
+    console.log(this.ability, "-Michael");
+  }
+}
+
+class Trevor extends Franklin {
+  cannibal;
+  constructor(criminal, player, ability, color, relationship, race, cannibal) {
+    super(criminal, player, ability, color, relationship, race);
+    this.cannibal = cannibal;
+  }
+  getAbility() {
+    console.log(this.ability, "-Trevor");
+  }
+}
+class Lester extends Franklin {
+  profession;
+  constructor(criminal, player, ability, color, relationship, race, hacker) {
+    super(criminal, player, ability, color, relationship, race);
+    this.profession = hacker;
+  }
+  getProffesion() {
+    console.log(this.profession, "-Lester");
+  }
+}
+const gta = new AllPlayers("Yes", "Yes");
+const frank = new Franklin("Yes", "yes", "Driving", "Green", "Single", "Black");
+const mich = new Michael(
+  "Yes",
+  "Yes",
+  "Shooting",
+  "Blue",
+  "Married",
+  "White",
+  2
+);
+const trevMyFav = new Trevor(
+  "Yes",
+  "Yes",
+  "Red Mist",
+  "Orange",
+  "single",
+  "White Mexican",
+  "Yes"
+);
+const lesty = new Lester(
+  "Yes",
+  "No",
+  "None",
+  "Unknown",
+  "Has a girlfriend at some point",
+  "White",
+  "Proffesional hacker"
+);
+
+// console.log(gta);
+// console.log(frank);
+// console.log(mich);
+// console.log(trevMyFav);
+// console.log(lesty);
+
+// const frankAbility = frank.getAbility();
+// const michAbility = mich.getAbility();
+// const trevAbility = trevMyFav.getAbility();
+// const lestcrest = lesty.getProffesion();
+
+///////////////Enkapsulacija///////////////////////////
+class Iman {
+  ime;
+  prezime;
+  #godine; //private property
+  constructor(name, lastname, age) {
+    this.ime = name;
+    this.prezime = lastname;
+    this.#godine = age;
+  }
+  setName(myName) {
+    this.ime = myName;
+  }
+}
+const myInf = new Iman("Iman", "Licina", 17);
+console.log(myInf);
+myInf.setName("Nisam ja Iman");
+console.log(myInf);
