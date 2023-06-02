@@ -688,3 +688,6 @@ const myInf = new Iman("Iman", "Licina", 17);
 console.log(myInf);
 myInf.setName("Nisam ja Iman");
 console.log(myInf);
+ž;
+
+/////////////////////////////////ABSTRAKCIJA
