@@ -1,5 +1,5 @@
 /*let b = 1;
-if(b > 7){
+ f(b > 7){
     console.log("b je vec od 7")
 
 }
@@ -671,23 +671,47 @@ const lesty = new Lester(
 // const lestcrest = lesty.getProffesion();
 
 ///////////////Enkapsulacija///////////////////////////
-class Iman {
-  ime;
-  prezime;
-  #godine; //private property
-  constructor(name, lastname, age) {
-    this.ime = name;
-    this.prezime = lastname;
-    this.#godine = age;
-  }
-  setName(myName) {
-    this.ime = myName;
+// class Iman {
+//   ime;
+//   prezime;
+//   #godine; //private property
+//   constructor(name, lastname, age) {
+//     this.ime = name;
+//     this.prezime = lastname;
+//     this.#godine = age;
+//   }
+//   setName(myName) {
+//     this.ime = myName;
+//   }
+// }
+// const myInf = new Iman("Iman", "Licina", 17);
+// console.log(myInf);
+// myInf.setName("Nisam ja Iman");
+// console.log(myInf);
+// ž;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const rendomNum = [2, 3, 44, 55, 66, 78, 89];
+let reversedArray = [];
+
+for (let i = 0; i < rendomNum.length; i++) {
+  // console.log(rendomNum[i]);
+}
+
+for (let i = rendomNum.length - 1; i >= 0; i--) {
+  reversedArray.push(rendomNum[i]); /////ovako reversamo niz
+}
+// console.log(rendomNum);
+// console.log(reversedArray);
+
+////////////////
+
+const rendomNums = [528, 34, 55, 667, 842, 23, 11, 23];
+let maxNum = 0;
+
+for (let i = 0; i < rendomNums.length; i++) {
+  if (rendomNums[i] > maxNum) {
+    maxNum = rendomNums[i];
   }
 }
-const myInf = new Iman("Iman", "Licina", 17);
-console.log(myInf);
-myInf.setName("Nisam ja Iman");
-console.log(myInf);
-ž;
-
-/////////////////////////////////ABSTRAKCIJA
+//console.log(maxNum);
