@@ -715,3 +715,38 @@ for (let i = 0; i < rendomNums.length; i++) {
   }
 }
 //console.log(maxNum);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const products = [
+  {
+    id: 1,
+    name: "T-shirt",
+    qty: 1,
+    price_per_unit: 100,
+  },
+  {
+    id: 1,
+    name: "Sneakers",
+    qty: 2,
+    price_per_unit: 300,
+  },
+  {
+    id: 1,
+    name: "Necklace",
+    qty: 5,
+    price_per_unit: 125,
+  },
+];
+const calcTotal = (arr) => {
+  const productsWithTotal = arr.map((el) => el.qty * el.price_per_unit);
+
+  const total = productsWithTotal.reduce((previusVal, currVal) => {
+    return previusVal + currVal;
+  }, 0);
+  // console.log(productsWithTotal);
+  // console.log(total);
+
+  // return total;
+};
+
+// console.log(calcTotal(products));
