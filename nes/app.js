@@ -750,3 +750,71 @@ const calcTotal = (arr) => {
 };
 
 // console.log(calcTotal(products));
+/////////////////////////////////////////////////////////////////////////////////
+
+const someNums = [12, 6, 23, 87, 99, 100];
+const mapped = someNums.map((el) => el * el);
+// console.log(mapped); KVADRIRANJE SVIH BROJEVA U NIZU
+
+const tajba = someNums.filter((el, i) => i % 2 === 0);
+// console.log(tajba);
+
+const randomWords = [
+  "macka",
+  "imam",
+  "hodza",
+  "nemam",
+  "pecat",
+  "efendija",
+  "televizor",
+];
+const drugoE = randomWords.filter((el) => el[1] === "e");
+//console.log(drugoE);
+
+// const nekiRandomBrojevi = [
+//   22, 4, 53, 68, 32, 68, 31, 13, 87, 43, 11, 1, 2, 3, 4,
+// ];
+// nekiRandomBrojevi.map((num) => {
+//   if (num > 18 && num < 30) {
+//     console.log((num * 8) / 4);
+//   } else if (num > 18) {
+//     console.log(num * 4);
+//   } else {
+//     console.log(num);
+//   }
+// });
+/////////////////////////////////////////////////////////////////
+
+// const prvaMatrica = [
+//   [20, 12, 25],
+//   [10, 222, 7],
+//   [00, 33, 46],
+// ];
+// for (let i = 0; i < prvaMatrica.length; i++) {
+//   console.log(prvaMatrica[i]);
+//   for (let j = 0; j < prvaMatrica[i].length; j++) {
+//     prvaMatrica[i][j] % 2 === 0
+//       ? console.log("Paran Broj")
+//       : console.log("Neparan Broj");
+//   }
+// }
+
+const clasAges = [17, 17, 16, 21, 23, 16, 25, 20];
+const someAges = clasAges.reduce((prev, curr) => prev + curr);
+//console.log(someAges / clasAges.length);
+
+const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
+const kms = miles.map((el) => el * 1.6);
+//console.log(kms);
+const sabrano = kms.reduce((prev, curr) => prev + curr);
+//console.log(sabrano / kms.length);
+//////////////////////////OVO JE DA SE IZBROJE SLOVA "M" U RECENICI
+const recenica = "Mama ima momu";
+let brojMova = 0;
+for (let i = 0; i < recenica.length; i++) {
+  console.log(recenica[i]);
+  if (recenica[i].toUpperCase() === "M") {
+    brojMova++;
+  }
+}
+//console.log(brojMova);
