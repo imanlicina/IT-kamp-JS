@@ -812,9 +812,20 @@ const sabrano = kms.reduce((prev, curr) => prev + curr);
 const recenica = "Mama ima momu";
 let brojMova = 0;
 for (let i = 0; i < recenica.length; i++) {
-  console.log(recenica[i]);
+  //console.log(recenica[i]);
   if (recenica[i].toUpperCase() === "M") {
     brojMova++;
   }
 }
 //console.log(brojMova);
+
+const automobili = {
+  ja: ["vw", "audi", "cayenne", "targa"],
+  tajra: ["golf", "audi", "bmw"],
+  iman: ["peugot", "fiat", "citroen", "x5"],
+  dzenis: ["pagani", "rols rojs", "mclaren"],
+};
+const allCars = Object.values(automobili);
+
+const kolikoIhIma = allCars.map((car) => [...car, car.length]);
+console.log(kolikoIhIma);
