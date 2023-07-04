@@ -829,3 +829,4 @@ const allCars = Object.values(automobili);
 
 const kolikoIhIma = allCars.map((car) => [...car, car.length]);
 console.log(kolikoIhIma);
+//i
