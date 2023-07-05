@@ -799,34 +799,40 @@ const drugoE = randomWords.filter((el) => el[1] === "e");
 //   }
 // }
 
-const clasAges = [17, 17, 16, 21, 23, 16, 25, 20];
-const someAges = clasAges.reduce((prev, curr) => prev + curr);
-//console.log(someAges / clasAges.length);
+// const clasAges = [17, 17, 16, 21, 23, 16, 25, 20];
+// const someAges = clasAges.reduce((prev, curr) => prev + curr);
+// //console.log(someAges / clasAges.length);
 
-const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
-const kms = miles.map((el) => el * 1.6);
-//console.log(kms);
-const sabrano = kms.reduce((prev, curr) => prev + curr);
-//console.log(sabrano / kms.length);
-//////////////////////////OVO JE DA SE IZBROJE SLOVA "M" U RECENICI
-const recenica = "Mama ima momu";
-let brojMova = 0;
-for (let i = 0; i < recenica.length; i++) {
-  //console.log(recenica[i]);
-  if (recenica[i].toUpperCase() === "M") {
-    brojMova++;
-  }
-}
-//console.log(brojMova);
+// const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
+// const kms = miles.map((el) => el * 1.6);
+// //console.log(kms);
+// const sabrano = kms.reduce((prev, curr) => prev + curr);
+// //console.log(sabrano / kms.length);
+// //////////////////////////OVO JE DA SE IZBROJE SLOVA "M" U RECENICI
+// const recenica = "Mama ima momu";
+// let brojMova = 0;
+// for (let i = 0; i < recenica.length; i++) {
+//   //console.log(recenica[i]);
+//   if (recenica[i].toUpperCase() === "M") {
+//     brojMova++;
+//   }
+// }
+// //console.log(brojMova);
 
-const automobili = {
-  ja: ["vw", "audi", "cayenne", "targa"],
-  tajra: ["golf", "audi", "bmw"],
-  iman: ["peugot", "fiat", "citroen", "x5"],
-  dzenis: ["pagani", "rols rojs", "mclaren"],
-};
-const allCars = Object.values(automobili);
+// const automobili = {
+//   ja: ["vw", "audi", "cayenne", "targa"],
+//   tajra: ["golf", "audi", "bmw"],
+//   iman: ["peugot", "fiat", "citroen", "x5"],
+//   dzenis: ["pagani", "rols rojs", "mclaren"],
+// };
+// const allCars = Object.values(automobili);
 
-const kolikoIhIma = allCars.map((car) => [...car, car.length]);
-console.log(kolikoIhIma);
-//i
+// const kolikoIhIma = allCars.map((car) => [...car, car.length]);
+// console.log(kolikoIhIma);
+
+fetch("https://jsonplaceholder.typicode.com/todos/")
+  .then((response) => response.json())
+  .then((json) => {
+    console.log(json);
+    return json.filter((el) => el.id % 2 === 0);
+  });
