@@ -830,9 +830,27 @@ const drugoE = randomWords.filter((el) => el[1] === "e");
 // const kolikoIhIma = allCars.map((car) => [...car, car.length]);
 // console.log(kolikoIhIma);
 
-fetch("https://jsonplaceholder.typicode.com/todos/")
-  .then((response) => response.json())
+// fetch("https://jsonplaceholder.typicode.com/todos/")
+//   .then((response) => response.json())
+//   .then((json) => {
+//     console.log(json);
+//     return json.filter((el) => el.id % 2 === 0);
+//   });
+
+// fetch("https://dummyjson.com/products")
+//   .then((res) => res.json())
+//   .then((json) => {
+//     console.log(json.products);
+//     return json.products.filter((el) => el.stock >= 68);
+//   })
+//   .then((data) => console.log(data));
+
+fetch("https://dummyjson.com/carts")
+  .then((res) => res.json())
   .then((json) => {
-    console.log(json);
-    return json.filter((el) => el.id % 2 === 0);
-  });
+    console.log(json.carts.products);
+    return json.carts.filter((el) =>
+      el.products.filter((el) => el.total >= 505)
+    );
+  })
+  .then((data) => console.log(data));
