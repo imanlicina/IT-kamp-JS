@@ -845,12 +845,24 @@ const drugoE = randomWords.filter((el) => el[1] === "e");
 //   })
 //   .then((data) => console.log(data));
 
-fetch("https://dummyjson.com/carts")
-  .then((res) => res.json())
-  .then((json) => {
-    console.log(json.carts.products);
-    return json.carts.filter((el) =>
-      el.products.filter((el) => el.total >= 505)
-    );
-  })
-  .then((data) => console.log(data));
+// fetch("https://dummyjson.com/carts")
+//   .then((res) => res.json())
+//   .then((json) => {
+//     console.log(json.carts.products);
+//     return json.carts.filter((el) =>
+//       el.products.filter((el) => el.total >= 505)
+//     );
+//   })
+//   .then((data) => console.log(data));
+
+const fetchData = async (number1) => {
+  //let broj = prompt("Unesite broj");
+
+  const data = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${number1}/comments`
+  );
+  const result = await data.json();
+
+  console.log(result);
+};
+fetchData(7);
