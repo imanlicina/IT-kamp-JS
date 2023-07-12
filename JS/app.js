@@ -855,14 +855,27 @@ const drugoE = randomWords.filter((el) => el[1] === "e");
 //   })
 //   .then((data) => console.log(data));
 
-const fetchData = async (number1) => {
-  //let broj = prompt("Unesite broj");
+// const fetchData = async () => {
+//   let broj = prompt("Unesite broj");
 
-  const data = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${number1}/comments`
-  );
-  const result = await data.json();
+//   const data = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts/${broj}/comments`
+//   );
+//   const result = await data.json();
 
-  console.log(result);
-};
-fetchData(7);
+//   console.log(result);
+// };
+// fetchData();
+
+let matrica = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+for (let i = 0; i < matrica.length; i++) {
+  for (let j = 0; j < matrica[i].length; j++) {
+    if (i + j === 2) {
+      console.log(matrica[i][j]);
+    }
+  }
+}
