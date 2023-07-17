@@ -867,15 +867,34 @@ const drugoE = randomWords.filter((el) => el[1] === "e");
 // };
 // fetchData();
 
-let matrica = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+///////////////////////////DA SE ISPISE 1,5,9
+// let matrica = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// for (let i = 0; i < matrica.length; i++) {
+//   console.log(matrica[i][i]);
+// }
+
+// /////////DA SE ISPISE 3,5,7
+// let matrica1 = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// for (let i = 0; i < matrica.length; i++) {
+//   for (let j = 0; j < matrica[i].length; j++) {
+//     if (i + j === 2) {
+//       console.log(matrica1[i][j]);
+//     }
+//   }
+// }
+
+const vezba = [
+  [11, 24, 6, 7, 4],
+  [45, 567, 32, 45, 56, 6],
+  [99, 6, 3, 4, 77, 87],
+  [3],
+  [88],
 ];
-for (let i = 0; i < matrica.length; i++) {
-  for (let j = 0; j < matrica[i].length; j++) {
-    if (i + j === 2) {
-      console.log(matrica[i][j]);
-    }
-  }
-}
